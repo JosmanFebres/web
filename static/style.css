@@ -96,7 +96,7 @@ footer {
 
 /* Estilos para la página HOME (index.html) */
 body.home-page {
-    background-image: url('/static/images/mustang.png');
+    background-image: url('../static/images/mustang.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -334,7 +334,7 @@ body.home-page .hero-section {
 
 /* --- NUEVOS ESTILOS PARA LA PÁGINA "ACERCA DE" (about.html) --- */
 body.about-page {
-    background-image: url('/static/images/ferrari.png');
+    background-image: url('../static/images/ferrari.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
