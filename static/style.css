@@ -1,0 +1,691 @@
+/* Estilos generales para el body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilos para el HEADER */
+header {
+    background-color: #2c3e50; /* Un gris oscuro, elegante */
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em; /* Título más grande */
+}
+
+/* Diseño del menú de navegación */
+nav {
+    margin-top: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; /* Espacio entre los elementos del menú */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5); /* Sombra para el texto */
+}
+
+nav ul li a:hover {
+    background-color: #34495e; /* Un color de fondo más oscuro al pasar el ratón */
+    transform: translateY(-2px); /* Efecto de elevación */
+}
+
+/* Estilos para MAIN */
+main {
+    flex-grow: 1;
+    padding: 20px;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+/* Estilos para el botón */
+.button {
+    display: block;
+    width: fit-content;
+    margin: 60px auto;
+    background-color: #007bff;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #ff0000;
+}
+
+/* Estilos para la barra de copyright (FOOTER) */
+footer {
+    background-color: #34495e; /* Mismo color que el hover del menú */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+/* Estilos para la página HOME (index.html) */
+body.home-page {
+    background-image: url('/static/images/mustang.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+body.home-page .hero-section {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.welcome-text {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+}
+
+.intro-text {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.featured-cars {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin: 20px auto;
+    max-width: 900px;
+}
+
+.featured-cars h2 {
+    color: #333;
+    margin-top: 0;
+}
+
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.carousel-slide img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.carousel-slide img:hover {
+    transform: scale(1.05);
+}
+
+.about-us-summary {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    border-radius: 8px;
+    margin: 30px auto;
+    max-width: 800px;
+}
+
+.about-us-summary h2 {
+    color: white;
+    margin-top: 0;
+}
+
+.about-us-summary p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+/* Estilos para la Galería de Autos */
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.car-card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.car-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background-color: white;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease-in-out;
+}
+
+.car-card:hover {
+    transform: translateY(-5px);
+}
+
+.car-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+    transition: transform 0.3s ease-in-out;
+}
+
+.car-card:hover img {
+    transform: scale(1.1);
+}
+
+.car-card .car-info {
+    padding: 15px;
+}
+
+.car-card .car-info h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 1.2em;
+}
+
+.car-card .car-info p {
+    margin: 5px 0;
+    color: #555;
+    font-size: 0.95em;
+}
+
+/* Estilos para la página de detalles */
+.details-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.details-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.details-image img {
+    max-width: 600px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.details-info {
+    max-width: 500px;
+    color: #333;
+}
+
+.details-info h2, .details-info h3 {
+    margin-top: 0;
+    color: #007bff;
+}
+
+.details-info p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+.details-info strong {
+    color: #555;
+}
+
+/* Estilos para las miniaturas en la página de detalles */
+.related-cars {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.related-cars h3 {
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.thumbnail-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.thumbnail {
+    width: 100px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.thumbnail:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .details-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .details-image img {
+        max-width: 100%;
+    }
+}
+
+/* --- NUEVOS ESTILOS PARA LA PÁGINA "ACERCA DE" (about.html) --- */
+body.about-page {
+    background-image: url('/static/images/ferrari.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+body.about-page main {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.about-section {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    max-width: 800px;
+    text-align: center;
+}
+
+.about-content {
+    color: white;
+}
+
+.section-title {
+    font-size: 2em;
+    margin-bottom: 15px;
+    color: #ff4500;
+}
+
+.project-description {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.contact-info {
+    margin-top: 30px;
+    border-top: 2px solid #ff4500;
+    padding-top: 20px;
+}
+
+.contact-info p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.contact-details {
+    margin-top: 15px;
+}
+
+.contact-details p {
+    margin: 5px 0;
+}
+
+.contact-details a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.contact-details a:hover {
+    color: #ff4500;
+    text-decoration: underline;
+}
+
+/* Asegúrate de que el footer no se superponga */
+body.about-page footer {
+    position: relative;
+    margin-top: auto;
+}
+
+/* --- Estilos mejorados para los botones de compra --- */
+.buy-options {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px; /* Espacio entre los botones */
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.button-link {
+    display: inline-block;
+    padding: 12px 25px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.add-to-cart-btn {
+    background-color: #28a745; /* Verde */
+}
+
+.buy-now-btn {
+    background-color: #ffc107; /* Amarillo/Dorado */
+    border: none;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #218838; /* Verde más oscuro al pasar el cursor */
+    transform: translateY(-2px); /* Efecto de "levantar" el botón */
+}
+
+.buy-now-btn:hover {
+    background-color: #e0a800; /* Amarillo más oscuro al pasar el cursor */
+    transform: translateY(-2px);
+}
+
+/* Estilo para el botón de la ventana modal */
+.modal-content .add-to-cart-btn {
+    background-color: #007bff; /* Azul, un color diferente para distinguirlo */
+    border: none;
+}
+
+.modal-content .add-to-cart-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para la página de Carrito */
+
+/* Estilos para el contenedor principal del carrito */
+.cart-items-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+/* Estilos para cada elemento individual en el carrito */
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    transition: transform 0.2s ease-in-out;
+}
+
+.cart-item:hover {
+    transform: translateY(-5px);
+}
+
+/* Estilos para la imagen del auto en el carrito */
+.cart-item img {
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Estilos para la información del auto */
+.item-info {
+    flex-grow: 1;
+}
+
+.item-info h3 {
+    margin: 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.item-info p {
+    margin: 5px 0 0;
+    color: #666;
+}
+
+/* Estilos para el botón de eliminar */
+.remove-from-cart-btn {
+    padding: 8px 12px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.remove-from-cart-btn:hover {
+    background-color: #c0392b;
+}
+
+/* Estilos para el resumen del carrito */
+.cart-summary {
+    text-align: right;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #eaf2f8;
+    border-radius: 8px;
+    max-width: 900px;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cart-summary h2 {
+    margin: 0 0 10px;
+    font-size: 1.5em;
+    color: #2c3e50;
+}
+
+.buy-now-btn {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.buy-now-btn:hover {
+    background-color: #2980b9;
+}
+
+/* Estilos para el mensaje de carrito vacío */
+.empty-cart-message {
+    text-align: center;
+    padding: 50px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: #7f8c8d;
+    max-width: 600px;
+    margin: 50px auto;
+}
+
+/* * Estilos para el modal de compra 
+ * Asegúrate de añadir estos estilos al final de tu archivo CSS
+ * para que no sobrescriban otras reglas importantes
+ */
+
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed; /* Mantiene la posición fija en la pantalla */
+    z-index: 1001; /* Asegura que esté por encima de otros elementos */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Habilita el scroll si el contenido es muy largo */
+    background-color: rgba(0,0,0,0.4); /* Fondo semi-transparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    position: relative;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    text-align: left;
+}
+
+/* Animación para que el modal aparezca desde arriba */
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+.close-btn {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+}
+
+.modal-content h2 {
+    text-align: center;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.modal-content p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.modal-content label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.modal-content input[type="text"],
+.modal-content input[type="email"],
+.modal-content input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Para que el padding no afecte el ancho */
+    font-size: 1em;
+}
+
+.modal-content .add-to-cart-btn {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    font-size: 1.1em;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.modal-content .add-to-cart-btn:hover {
+    background-color: #0056b3;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acerca de Mí</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Style.css') }}">
+</head>
+<body class="about-page">
+    <header>
+        <h1>Acerca de Mí</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Inicio</a></li>
+                <li><a href="{{ url_for('about') }}">Acerca de</a></li>
+                <li><a href="{{ url_for('gallery') }}">Galería</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="about-section">
+            <div class="about-content">
+                <h2 class="section-title">Sobre este Proyecto</h2>
+                <p class="project-description">
+                    Este es un pequeño proyecto de práctica creado para experimentar y adquirir experiencia en la programación y el diseño de una página web con Flask, HTML y CSS. El objetivo es construir una plataforma funcional de venta de autos, explorando el manejo de rutas, plantillas y datos dinámicos.
+                </p>
+                <h2 class="section-title">Autor: Josman Febres</h2>
+                <div class="contact-info">
+                    <p>Si tienes alguna pregunta o sugerencia sobre el proyecto, no dudes en contactarme.</p>
+                    <div class="contact-details">
+                        <p><strong>Correo Electrónico:</strong> <a href="mailto:josman.febres@gmail.com">josman.febres@gmail.com</a></p>
+                        <p><strong>Teléfono:</strong> <a href="tel:+584121234567">+58 414 0193476</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Venta de Autos</p>
+    </footer>
+</body>
+</html>

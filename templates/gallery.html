@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Autos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Galería de Autos</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Inicio</a></li>
+                <li><a href="{{ url_for('about') }}">Acerca de</a></li>
+                <li><a href="{{ url_for('gallery') }}">Galería</a></li>
+                <li><a href="{{ url_for('cart') }}">Carrito ({{ session.get('cart', [])|length }})</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="gallery-section">
+            <h2>Nuestros Modelos Disponibles</h2>
+            <div class="gallery-container">
+                {% for car_id, car in cars.items() %}
+                <a href="{{ url_for('details', car_id=car_id) }}" class="car-card-link">
+                    <div class="car-card">
+                        <img src="{{ url_for('static', filename='images/' + car.imagen) }}" alt="{{ car.marca }} {{ car.modelo }}">
+                        <div class="car-info">
+                            <h3>Modelo: {{ car.modelo }}</h3>
+                            <p>Marca: {{ car.marca }}</p>
+                            <p>Año de Creación: {{ car.anio }}</p>
+                            <p>Precio: {{ car.precio }}</p>
+                            <p>Garantía: {{ car.garantia }}</p>
+                        </div>
+                    </div>
+                </a>
+                {% endfor %}
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Venta de Autos</p>
+    </footer>
+</body>
+</html>

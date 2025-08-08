@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venta de Autos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Style.css') }}">
+</head>
+<body class="home-page">
+    <header>
+        <h1>Venta de Autos</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Inicio</a></li>
+                <li><a href="{{ url_for('about') }}">Acerca de</a></li>
+                <li><a href="{{ url_for('gallery') }}">Galería</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="hero-section">
+            <h2 class="welcome-text">¡Bienvenidos a mi sitio web experimental de ventas de autos!</h2>
+            <p class="intro-text">
+                Descubre nuestra impresionante colección de vehículos, desde deportivos de alto rendimiento hasta robustas camionetas. Encontrarás las mejores ofertas en autos nuevos de agencia, con una gran variedad de marcas y con años de garantía. Nuestro objetivo es ayudarte a encontrar el auto de tus sueños con la mejor experiencia de compra.
+            </p>
+            <a href="{{ url_for('gallery') }}" class="button">Ir a la Galería</a>
+        </div>
+
+        <section class="featured-cars">
+            <h2>Autos Destacados</h2>
+            <div class="carousel-container">
+                <div class="carousel-slide">
+                    <img src="{{ url_for('static', filename='images/nissangt-r.png') }}" alt="Auto destacado 1">
+                    <h3>Nissan GT-R</h3>
+                </div>
+                <div class="carousel-slide">
+                    <img src="{{ url_for('static', filename='images/chevroletcorvettec8.png') }}" alt="Auto destacado 2">
+                    <h3>Chevrolet Corvette C8</h3>
+                </div>
+                <div class="carousel-slide">
+                    <img src="{{ url_for('static', filename='images/toyotasupra.png') }}" alt="Auto destacado 3">
+                    <h3>Toyota Supra</h3>
+                </div>
+                </div>
+        </section>
+
+        <section class="about-us-summary">
+            <h2>Sobre Nosotros</h2>
+            <p>
+                Este es un pequeño proyecto de práctica para experimentar y adquirir experiencia en la programación y diseño de una página web. Te invitamos a explorar las diferentes secciones para conocer más.
+            </p>
+            <a href="{{ url_for('about') }}" class="button">Conoce al Autor</a>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Venta de Autos</p>
+    </footer>
+</body>
+</html>
